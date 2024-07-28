@@ -14,7 +14,7 @@ systemctl enable stunnel4
 systemctl start stunnel4
 ````
 
-Once done, you can test stunnel is working by telneting to `localhost:25`, you will then see the SMTP response below:
+Once done, you can test stunnel is working by telneting to `localhost:25`, you will then see the SMTP response header from Mimecast below:
 ````
 telnet localhost:25
 ````
