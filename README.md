@@ -1,5 +1,5 @@
 # stunnel-mimecast
-Accept SMTP without TLS locally, and enforced via TLS to Mimecast smarthost
+Accept SMTP plaintext (unencrypted), and enforced via TLS to Mimecast smarthost
 
 # Install stunnel on Debian or Ubuntu
 ````
