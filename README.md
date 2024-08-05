@@ -6,7 +6,29 @@ Accept SMTP plaintext (unencrypted), and enforced via TLS to Mimecast smarthost
 apt update
 apt install -y stunnel4
 ````
-Download stunnel.conf to /etc/stunnel/stunnel.conf
+Download stunnel.conf to /etc/stunnel/stunnel.conf, or copy and paste from below:
+
+````
+client = yes
+
+[smtp-plaintext-to-tls13-mimecast]
+accept = 0.0.0.0:25
+connect = eu-smtp-outbound-1.mimecast.com:25
+protocol = smtp
+sslVersion = TLSv1.3
+options = NO_SSLv2
+options = NO_SSLv3
+
+[smtp-tls-to-plaintext-local]
+accept = 0.0.0.0:587
+connect = 127.0.0.1:25
+protocol = smtp
+cert = /path/to/your/certificate.crt
+key = /path/to/your/private.key
+options = NO_SSLv2
+options = NO_SSLv3
+````
+
 
 then run:
 ````
