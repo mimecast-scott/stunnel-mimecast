@@ -6,7 +6,7 @@ Accept SMTP plaintext (unencrypted), and enforced via TLS to Mimecast smarthost
 apt update
 apt install -y stunnel4
 ````
-Download stunnel.conf to /etc/stunnel/stunnel.conf, or copy and paste from below:
+Download [stunnel.conf](https://github.com/mimecast-scott/stunnel-mimecast/blob/main/stunnel.conf) to /etc/stunnel/stunnel.conf, or copy and paste from below:
 
 ````
 client = yes
