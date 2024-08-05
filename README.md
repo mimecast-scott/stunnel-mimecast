@@ -9,9 +9,10 @@ apt install -y stunnel4
 Download [stunnel.conf](https://github.com/mimecast-scott/stunnel-mimecast/blob/main/stunnel.conf) to /etc/stunnel/stunnel.conf, or copy and paste from below:
 
 ````
-client = yes
+
 
 [smtp-plaintext-to-tls13-mimecast]
+client = yes
 accept = 0.0.0.0:25
 connect = eu-smtp-outbound-1.mimecast.com:25
 protocol = smtp
@@ -20,6 +21,7 @@ options = NO_SSLv2
 options = NO_SSLv3
 
 [smtp-tls-to-plaintext-local]
+client = no
 accept = 0.0.0.0:587
 connect = 127.0.0.1:25
 protocol = smtp
